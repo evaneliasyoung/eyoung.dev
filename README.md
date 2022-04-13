@@ -10,5 +10,5 @@ Web portfolio.
 [tests-url]: https://github.com/evaneliasyoung/eyoung.dev/actions/workflows/test.yml
 [gts-image]: https://img.shields.io/badge/code%20style-google-blueviolet.svg
 [gts-url]: https://github.com/google/gts
-[gitmoji-image]: https://img.shields.io/badge/git-%20😜%20😍-FFDD67.svg
+[gitmoji-image]: https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg
 [gitmoji-url]: https://gitmoji.dev
