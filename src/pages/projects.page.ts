@@ -59,7 +59,7 @@ export default class ProjectsPageElement extends LitElement {
     css`
       #project-card-container {
         ${displayFlex} ${wrap};
-        grid-gap: var(--eey-card-gap, 0.5rem);
+        grid-gap: var(--eey-card-gap, 2rem);
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       }
     `,
