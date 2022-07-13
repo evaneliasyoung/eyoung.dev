@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Evan Elias Young</title>
+
+    <meta charset="utf-8" />
+    <meta name="copyright" content="&copy; Evan Elias Young" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, nofollow" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto+Slab:300,400,700"
+    />
+
+    <style>
+      html {
+        font-family: var(--font-family-serif, 'Roboto Slab', times);
+        color: hsl(
+          var(
+            --foreground,
+            var(--foreground-hue, 210),
+            var(--foreground-saturation, 70%),
+            var(--foreground-lightness, 5%)
+          )
+        );
+        background: hsl(
+          var(
+            --background,
+            var(--background-hue, 0),
+            var(--background-saturation, 0%),
+            var(--background-lightness, 100%)
+          )
+        );
+        overflow-x: hidden;
+        overflow-y: overlay;
+        --webkit-overflow-scrolling: touch;
+        font-display: swap;
+        transition: background, color 150ms;
+
+        --primary-hue: 210;
+        --primary-saturation: 50%;
+        --eey-shape-fab: 50%;
+        --eey-shape-small: 0.625rem;
+        --eey-shape-medium: 0.625rem;
+        --button-border-radius: var(--eey-shape-small, 00.625rem);
+      }
+
+      html[theme='light'] {
+        --foreground: var(--primary-hue, 210), 70%, 5%;
+        --background: 0, 0%, 100%;
+        --shadow: var(--primary-hue, 210), 70%, 5%;
+      }
+
+      html[theme='dark'],
+      html[theme='darker'] {
+        --foreground-hue: 0;
+        --foreground-saturation: 0%;
+        --shadow: 0, 5%, 50%;
+      }
+
+      html[theme='dark'] {
+        --foreground-lightness: 95%;
+        --background: var(--primary-hue, 210), 15%, 15%;
+      }
+
+      html[theme='darker'] {
+        --foreground-lightness: 100%;
+        --background: 0, 0%, 0%;
+      }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <script type="module" src="/src/app-main.element.ts"></script>
+  </head>
+
+  <body style="margin: 0">
+    <app-main></app-main>
+  </body>
+</html>

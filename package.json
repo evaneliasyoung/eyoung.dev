@@ -2,7 +2,18 @@
   "name": "eyoung.dev",
   "version": "1.0.0",
   "description": "Web portfolio",
+  "main": "dist/app-router.element.es.js",
+  "exports": {
+    ".": "./dist/app-router.element.es.js"
+  },
+  "types": "types/app-router.element.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
   "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
     "format": "prettier -w .",
     "format-check": "prettier -c .",
     "lint": "eslint src"
@@ -20,18 +31,28 @@
     "url": "https://github.com/evaneliasyoung/eyoung.dev/issues"
   },
   "homepage": "https://github.com/evaneliasyoung/eyoung.dev#readme",
+  "dependencies": {
+    "@mdi/js": "^6.6.96",
+    "color": "^4.2.3",
+    "lit-element": "^3.2.0",
+    "lit-element-router": "^2.0.3",
+    "lit-html": "^2.2.2",
+    "weightless": "^0.0.37"
+  },
   "devDependencies": {
+    "@types/color": "^3.0.3",
     "@types/node": "^17.0.23",
-    "@typescript-eslint/parser": "^5.19.0",
+    "@typescript-eslint/parser": "^5.18.0",
     "eslint": "^8.13.0",
     "eslint-plugin-github": "^4.3.6",
     "eslint-plugin-node": "^11.1.0",
     "prettier": "^2.6.2",
     "tslib": "^2.3.1",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.3",
+    "vite": "^2.9.1"
   },
   "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=7.0.0"
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
   }
 }
