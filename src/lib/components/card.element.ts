@@ -51,7 +51,7 @@ export default class CardElement extends LitElement {
     `,
     css`
       .wrapper {
-        padding: 0.5rem var(--eey-card-padding-xy, 1rem);
+        padding: 0.5rem var(--eey-card-padding-x, 1rem);
         flex: 1 1 0%;
       }
     `,
