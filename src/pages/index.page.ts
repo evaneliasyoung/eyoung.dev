@@ -233,7 +233,7 @@ export default class IndexPageElement extends LitElement {
         Got a burning question? Reach out.
       </wl-title>
       <wl-text>
-        With a variety of different ways to contact myself you should find a
+        With a variety of different ways to contact me you should find a
         suitable medium below.
       </wl-text>
       <div id="socials">
