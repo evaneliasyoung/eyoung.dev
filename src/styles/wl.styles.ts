@@ -119,6 +119,6 @@ export const shadow = constructHSL(
   '15%'
 );
 
-export const elevate = (z: number = 1) => css`
+export const elevate = (z = 1) => css`
   box-shadow: var(--elevation-${z}, 0 0.3125rem 0.625rem -0.125rem ${shadow});
 `;

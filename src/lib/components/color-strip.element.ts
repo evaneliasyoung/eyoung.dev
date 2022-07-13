@@ -65,8 +65,8 @@ export default class ColorStripElement extends LitElement {
   //#endregion
 
   //#region Properties
-  @property({type: Boolean}) allowInput: boolean = false;
-  @property({type: Boolean}) showHex: boolean = false;
+  @property({type: Boolean}) allowInput = false;
+  @property({type: Boolean}) showHex = false;
   @property({type: String}) name?: string;
   @property({type: String}) color?: string;
   @property({type: String}) colors?: string;
@@ -108,10 +108,10 @@ export default class ColorStripElement extends LitElement {
     </div>`;
 
   protected render = () =>
-    html` ${this.allowInput ? this.#renderInput() : ``}
+    html` ${this.allowInput ? this.#renderInput() : ''}
     ${this.name !== undefined
       ? html`<wl-title level="1">${this.name}</wl-title>`
-      : ``}
+      : ''}
     ${this.displayColors.map(this.#renderColor)}`;
   //#endregion
 }
