@@ -11,7 +11,7 @@
 import {Abstract, Constructor, ConstructorArgs} from '../types/object.types';
 import {Singleton, SINGLETON_KEY} from '../types/singleton.types';
 
-export const singleton = <T extends Constructor<any>>(Klass: T) =>
+export const singleton = <T extends Constructor<T>>(Klass: T) =>
   new Proxy(Klass, {
     construct: (
       target: Singleton<T>,
