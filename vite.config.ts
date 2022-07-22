@@ -1,25 +1,30 @@
-import {defineConfig} from 'vite';
-
-const PUBLIC: boolean = false;
-const PROXY_HMR: boolean = false;
+import {defineConfig, loadEnv} from 'vite';
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  build: {
-    lib: {
-      entry: 'src/app-main.element.ts',
-      formats: ['es'],
+export default ({mode}) => {
+  const env = {...process.env, ...loadEnv(mode, process.cwd(), '')} as {
+    HOST: string;
+    HMR_PORT: string;
+    PORT: string;
+  };
+
+  return defineConfig({
+    build: {
+      lib: {
+        entry: 'src/app-main.element.ts',
+        formats: ['es'],
+      },
+      rollupOptions: {
+        external: /^lit-element/,
+      },
     },
-    rollupOptions: {
-      external: /^lit-element/,
+    server: {
+      host: env.HOST,
+      port: parseInt(env.PORT) ?? undefined,
+      strictPort: true,
+      hmr: {
+        clientPort: parseInt(env.HMR_PORT) ?? undefined,
+      },
     },
-  },
-  server: {
-    host: PUBLIC ? '0.0.0.0' : 'localhost',
-    port: 7270,
-    strictPort: true,
-    hmr: {
-      clientPort: PROXY_HMR ? 443 : 7270,
-    },
-  },
-});
+  });
+};
